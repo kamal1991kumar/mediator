@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mediator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="js/Mediator.js"></script>
+        <script src="js/InputFieldWidget.js"></script>
+        <script src="js/OutputFieldWidget.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="widget">
+                <h2 class="widget__head">Widget 1</h2>
+                <div class="widget__body" id='widget1'>
+                    <script>
+                        const _widget = window.inputField;
+                        _widget.init( window.mediator );
+                        _widget.render( '#widget1' );
+                    </script>
+                </div>
+                
+            </div>
+            <div class="widget">
+                <h2 class="widget__head">Widget 2</h2>
+                <div class="widget__body" id='widget2'>
+                    <script>
+                        const _widget2 = window.outputField;
+                        _widget2.init( window.mediator );
+                        _widget2.render( '#widget2' );
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
